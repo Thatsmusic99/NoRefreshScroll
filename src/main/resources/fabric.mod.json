@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "norefreshscroll",
+  "version": "${version}",
+  "name": "NoRefreshScroll",
+  "description": "Stops the refresh button in the Multiplayer Screen taking you to the very top of the screen.",
+  "authors": ["Thatsmusic99"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/norefreshscroll/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.thatsmusic99.norefreshscroll.client.NoRefreshScrollClient"
+    ],
+    "main": [
+      "io.github.thatsmusic99.norefreshscroll.NoRefreshScroll"
+    ]
+  },
+  "mixins": [
+    "NoRefreshScroll.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.13.3",
+    "minecraft": "1.18.2"
+  }
+}

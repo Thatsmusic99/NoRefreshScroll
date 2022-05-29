@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.thatsmusic99.norefreshscroll.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MultiplayerScreenAccessor",
+    "MultiplayerScreenMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
