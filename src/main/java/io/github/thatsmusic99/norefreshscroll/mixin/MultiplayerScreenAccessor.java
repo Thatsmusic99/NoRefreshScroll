@@ -12,9 +12,4 @@ public interface MultiplayerScreenAccessor {
     @Accessor
     MultiplayerServerListWidget getServerListWidget();
 
-    @Accessor
-    boolean isInitialized();
-
-    @Invoker
-    void invokeInit();
 }

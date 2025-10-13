@@ -26,15 +26,12 @@ public class MultiplayerScreenMixin {
         MultiplayerServerListWidget oldListWidget = ((MultiplayerScreenAccessor) multiplayerScreen).getServerListWidget();
 
         double scrollAmount = oldListWidget.getScrollY();
-        // Check if the screen is initialised.
-        if (!((MultiplayerScreenAccessor) screen).isInitialized()) {
-            screen.init(client, client.getWindow().getScaledWidth(), client.getWindow().getScaledHeight());
-            ((MultiplayerScreenAccessor) screen).invokeInit();
-        }
+
+        // Set the screen.
+        client.setScreen(screen);
+
         // Get the new server list widget.
         MultiplayerServerListWidget newListWidget = ((MultiplayerScreenAccessor) screen).getServerListWidget();
         newListWidget.setScrollY(scrollAmount);
-        // Set the screen.
-        client.setScreen(screen);
     }
 }
